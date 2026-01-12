@@ -11,11 +11,17 @@
 docker compose up --build
 ```
 
-### Option 2 : Python
+### Option 2 : Script automatique (Windows)
 ```bash
-pip install -r requirements.txt
-python -m flask run
+start.bat
 ```
+
+### Option 3 : Script automatique (Linux/Mac)
+```bash
+chmod +x start.sh && ./start.sh
+```
+
+> Les scripts vérifient automatiquement si Python et les dépendances sont installés, et les installent si nécessaire.
 
 👉 **Accès au site : http://localhost:5000**
 
