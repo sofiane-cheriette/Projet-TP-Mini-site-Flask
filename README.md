@@ -15,6 +15,10 @@ docker compose up --build
 ```bash
 .\start.bat
 ```
+ou directement :
+```bash
+python start.py
+```
 
 ### Option 3 : Script automatique (Linux/Mac)
 ```bash
