@@ -7,9 +7,85 @@
 {% block content %}
 <div class="page-header">
     <h2>Catalogue des Jeux Vidéo</h2>
-    <p>{{ items|length }} jeux disponibles dans notre catalogue</p>
+    <p>{{ total_items }} jeux dans notre catalogue</p>
 </div>
 
+<!-- Barre de recherche et filtres -->
+<div class="search-filter-section">
+    <form method="GET" action="{{ url_for('items_list') }}" class="search-form">
+        <!-- Recherche textuelle -->
+        <div class="search-box">
+            <input 
+                type="text" 
+                name="q" 
+                placeholder="🔍 Rechercher un jeu, développeur..." 
+                value="{{ current_search }}"
+                class="search-input"
+            >
+            <button type="submit" class="btn btn-primary search-btn">Rechercher</button>
+        </div>
+        
+        <!-- Filtres -->
+        <div class="filters-row">
+            <!-- Filtre par genre -->
+            <div class="filter-group">
+                <label for="genre">Genre</label>
+                <select name="genre" id="genre" class="filter-select">
+                    <option value="">Tous les genres</option>
+                    {% for genre in genres %}
+                    <option value="{{ genre }}" {% if current_genre == genre %}selected{% endif %}>{{ genre }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <!-- Filtre par année -->
+            <div class="filter-group">
+                <label for="year">Année</label>
+                <select name="year" id="year" class="filter-select">
+                    <option value="">Toutes les années</option>
+                    {% for value, label in year_ranges %}
+                    <option value="{{ value }}" {% if current_year == value %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <!-- Filtre par plateforme -->
+            <div class="filter-group">
+                <label for="platform">Plateforme</label>
+                <select name="platform" id="platform" class="filter-select">
+                    <option value="">Toutes les plateformes</option>
+                    {% for platform in platforms %}
+                    <option value="{{ platform }}" {% if current_platform == platform %}selected{% endif %}>{{ platform }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <!-- Boutons d'action -->
+            <div class="filter-actions">
+                <button type="submit" class="btn btn-secondary">Filtrer</button>
+                <a href="{{ url_for('items_list') }}" class="btn btn-outline">Réinitialiser</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Résultats -->
+<div class="results-info">
+    {% if current_search or current_genre or current_year or current_platform %}
+    <p class="results-count">
+        <strong>{{ items|length }}</strong> résultat(s) trouvé(s)
+        {% if current_search %} pour "<em>{{ current_search }}</em>"{% endif %}
+    </p>
+    {% endif %}
+</div>
+
+{% if items|length == 0 %}
+<div class="no-results">
+    <div class="no-results-icon">🎮</div>
+    <h3>Aucun jeu trouvé</h3>
+    <p>Essayez de modifier vos critères de recherche ou <a href="{{ url_for('items_list') }}">réinitialisez les filtres</a>.</p>
+</div>
+{% else %}
 <div class="items-grid">
     {% for item in items %}
     <div class="item-card">
@@ -33,4 +109,5 @@
     </div>
     {% endfor %}
 </div>
+{% endif %}
 {% endblock %}
