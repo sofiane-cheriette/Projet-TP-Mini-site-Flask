@@ -62,22 +62,36 @@
         <section class="about-section">
             <h3>📂 Structure du projet</h3>
             <pre class="code-block">
-app/
-├── __init__.py
-├── routes.py
-├── data/
-│   └── items.json
-├── templates/
-│   ├── base.html
-│   ├── index.html
-│   ├── items_list.html
-│   ├── item_detail.html
-│   └── about.html
-└── static/
-    └── style.css
-requirements.txt
-Dockerfile
-README.md
+Projet/
+├── app/
+│   ├── __init__.py           # Initialisation Flask
+│   ├── routes.py             # Définition des routes
+│   ├── data/
+│   │   └── items.json        # 30 jeux vidéo avec images
+│   ├── templates/
+│   │   ├── base.html         # Template de base
+│   │   ├── index.html        # Page d'accueil
+│   │   ├── items_list.html   # Liste des jeux
+│   │   ├── item_detail.html  # Détail d'un jeu
+│   │   ├── about.html        # Page À propos
+│   │   ├── 404.html          # Page d'erreur
+│   │   └── partials/
+│   │       ├── header.html   # En-tête du site
+│   │       └── footer.html   # Pied de page
+│   └── static/
+│       └── css/
+│           ├── base.module.css
+│           ├── header.module.css
+│           ├── footer.module.css
+│           ├── index.module.css
+│           ├── items_list.module.css
+│           ├── item_detail.module.css
+│           ├── about.module.css
+│           └── 404.module.css
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+└── README.md
             </pre>
         </section>
     </div>

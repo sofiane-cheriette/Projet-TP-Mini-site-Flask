@@ -1,35 +1,48 @@
 # Mini Catalogue de Jeux Vidéo 🎮
 
-## Description
-Application web Flask permettant de parcourir un catalogue de jeux vidéo. 
+> Application web Flask permettant de parcourir un catalogue de 30 jeux vidéo avec images.
+
+---
+
+## 🚀 Lancement rapide
+
+### Option 1 : Docker Compose (recommandé)
+```bash
+docker compose up --build
+```
+
+### Option 2 : Docker
+```bash
+docker build -t mini-catalogue .
+docker run -p 5000:5000 mini-catalogue
+```
+
+### Option 3 : Python (sans Docker)
+```bash
+pip install -r requirements.txt
+python -m flask run
+```
+
+👉 **Accès au site : http://localhost:5000**
+
+---
+
+## 📖 Description
+
+Application web développée dans le cadre d'un TP de L3 sur Flask et Docker.  
 Les données sont stockées dans un fichier JSON et le site est conteneurisé avec Docker.
 
 **Thème choisi : Jeux Vidéo**
 
-## Structure du projet
-```
-Projet/
-├── app/
-│   ├── __init__.py           # Initialisation de l'application Flask
-│   ├── routes.py             # Définition des routes
-│   ├── data/
-│   │   └── items.json        # Données du catalogue (pseudo BDD)
-│   ├── templates/
-│   │   ├── base.html         # Template de base (header, nav, footer)
-│   │   ├── index.html        # Page d'accueil
-│   │   ├── items_list.html   # Liste des jeux
-│   │   ├── item_detail.html  # Détail d'un jeu
-│   │   ├── about.html        # Page À propos
-│   │   └── 404.html          # Page d'erreur 404
-│   └── static/
-│       └── style.css         # Feuille de styles
-├── requirements.txt          # Dépendances Python
-├── Dockerfile                # Configuration Docker
-├── docker-compose.yml        # Configuration Docker Compose
-└── README.md                 # Ce fichier
-```
+### Fonctionnalités
+- 🎮 Catalogue de 30 jeux vidéo avec images
+- 🔍 Affichage détaillé de chaque jeu
+- 📱 Design responsive et moderne
+- 🐳 Conteneurisation Docker
 
-## Les 4 pages du site
+---
+
+## 🌐 Les 4 pages du site
 
 | Route | Template | Description |
 |-------|----------|-------------|
@@ -38,66 +51,64 @@ Projet/
 | `/items/<id>` | item_detail.html | Détail d'un jeu spécifique |
 | `/about` | about.html | Page À propos avec infos sur le projet |
 
-## Lancement avec Docker
+---
 
-### 1. Construire l'image Docker
-```bash
-docker build -t mini-catalogue .
+## 📂 Structure du projet
+
+```
+Projet/
+├── app/
+│   ├── __init__.py           # Initialisation de l'application Flask
+│   ├── routes.py             # Définition des routes
+│   ├── data/
+│   │   └── items.json        # Données du catalogue (30 jeux avec images)
+│   ├── templates/
+│   │   ├── base.html         # Template de base
+│   │   ├── index.html        # Page d'accueil
+│   │   ├── items_list.html   # Liste des jeux
+│   │   ├── item_detail.html  # Détail d'un jeu
+│   │   ├── about.html        # Page À propos
+│   │   ├── 404.html          # Page d'erreur 404
+│   │   └── partials/
+│   │       ├── header.html   # En-tête du site
+│   │       └── footer.html   # Pied de page
+│   └── static/
+│       └── css/              # CSS modulaires
+│           ├── base.module.css
+│           ├── header.module.css
+│           ├── footer.module.css
+│           ├── index.module.css
+│           ├── items_list.module.css
+│           ├── item_detail.module.css
+│           ├── about.module.css
+│           └── 404.module.css
+├── requirements.txt          # Dépendances Python
+├── Dockerfile                # Configuration Docker
+├── docker-compose.yml        # Configuration Docker Compose
+└── README.md                 # Ce fichier
 ```
 
-### 2. Lancer le conteneur
-```bash
-docker run -p 5000:5000 mini-catalogue
-```
+---
 
-### Alternative avec Docker Compose
-```bash
-docker compose up --build
-```
+## 🛠️ Technologies utilisées
 
-Le site est ensuite accessible sur : **http://localhost:5000**
+| Technologie | Usage |
+|-------------|-------|
+| **Python 3.11** | Langage principal |
+| **Flask 3.0** | Framework web |
+| **Jinja2** | Moteur de templates |
+| **HTML/CSS** | Interface utilisateur |
+| **Docker** | Conteneurisation |
+| **JSON** | Stockage des données |
 
-## Lancement en local (sans Docker)
+---
 
-### 1. Créer un environnement virtuel
-```bash
-python -m venv venv
-```
+## 👤 Équipe
 
-### 2. Activer l'environnement virtuel
-```bash
-# Windows
-venv\Scripts\activate
-
-# Linux/Mac
-source venv/bin/activate
-```
-
-### 3. Installer les dépendances
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Lancer l'application
-```bash
-# Option 1 : avec flask run
-set FLASK_APP=app/routes.py
-flask run
-
-# Option 2 : avec Python directement
-python -c "from app import app; app.run(host='0.0.0.0', port=5000, debug=True)"
-```
-
-## Technologies utilisées
-- **Python 3.11**
-- **Flask 3.0** - Framework web
-- **Jinja2** - Moteur de templates
-- **HTML/CSS** - Interface utilisateur
-- **Docker** - Conteneurisation
-- **JSON** - Stockage des données
-
-## Équipe
 - **Sofiane CHERIETTE** - Étudiant L3
 
-## TP TP – Mini site Flask
+---
+
+## 📝 TP – Mini site Flask
+
 © 2026
