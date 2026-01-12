@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/legal.module.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="legal-page">
+    <div class="legal-header">
+        <h2>🔒 Politique de Confidentialité</h2>
+        <p class="legal-date">Dernière mise à jour : 12 janvier 2026</p>
+    </div>
+
+    <div class="legal-content">
+        <section class="legal-section">
+            <h3>1. Introduction</h3>
+            <p>
+                Bienvenue sur Mini Catalogue. Nous accordons une grande importance à la protection 
+                de vos données personnelles. Cette politique de confidentialité explique comment 
+                nous collectons, utilisons et protégeons vos informations.
+            </p>
+        </section>
+
+        <section class="legal-section">
+            <h3>2. Données collectées</h3>
+            <p>Dans le cadre de ce projet éducatif, nous ne collectons aucune donnée personnelle.</p>
+            <p>Ce site est un projet de démonstration (TP) et ne dispose pas :</p>
+            <ul>
+                <li>De système d'inscription ou de connexion</li>
+                <li>De formulaires de contact</li>
+                <li>De système de paiement</li>
+                <li>De tracking publicitaire</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>3. Cookies</h3>
+            <p>
+                Ce site peut utiliser des cookies techniques essentiels au fonctionnement du site.
+                Aucun cookie publicitaire ou de tracking n'est utilisé.
+            </p>
+            <p>
+                Pour plus d'informations, consultez notre 
+                <a href="{{ url_for('cookies') }}">Politique des cookies</a>.
+            </p>
+        </section>
+
+        <section class="legal-section">
+            <h3>4. Hébergement</h3>
+            <p>
+                Ce site est un projet local hébergé via Docker. Les données du catalogue 
+                (liste des jeux) sont stockées dans un fichier JSON local et ne contiennent 
+                aucune information personnelle.
+            </p>
+        </section>
+
+        <section class="legal-section">
+            <h3>5. Vos droits</h3>
+            <p>
+                Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :
+            </p>
+            <ul>
+                <li><strong>Droit d'accès</strong> : obtenir une copie de vos données</li>
+                <li><strong>Droit de rectification</strong> : corriger vos données</li>
+                <li><strong>Droit à l'effacement</strong> : supprimer vos données</li>
+                <li><strong>Droit à la portabilité</strong> : récupérer vos données</li>
+            </ul>
+            <p>
+                Étant donné qu'aucune donnée personnelle n'est collectée sur ce site, 
+                ces droits ne s'appliquent pas dans ce contexte.
+            </p>
+        </section>
+
+        <section class="legal-section">
+            <h3>6. Contact</h3>
+            <p>
+                Pour toute question concernant cette politique de confidentialité, 
+                vous pouvez nous contacter via la page 
+                <a href="{{ url_for('about') }}">À propos</a>.
+            </p>
+        </section>
+    </div>
+
+    <div class="legal-footer">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">← Retour à l'accueil</a>
+    </div>
+</div>
+{% endblock %}

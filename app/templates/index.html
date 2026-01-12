@@ -5,39 +5,161 @@
 {% endblock %}
 
 {% block content %}
+<!-- Hero Section avec effet parallaxe -->
 <div class="hero">
+    <div class="hero-particles"></div>
     <div class="hero-content">
-        <h2>Bienvenue sur le Mini Catalogue de Jeux Vidéo</h2>
+        <span class="hero-badge">🎮 Plus de {{ stats.total_games }} jeux disponibles</span>
+        <h2>Découvrez les Meilleurs<br><span class="gradient-text">Jeux Vidéo</span></h2>
         <p class="hero-description">
-            Découvrez notre sélection des meilleurs jeux vidéo de tous les temps. 
-            De l'action-aventure aux RPG, en passant par les metroidvanias, 
-            explorez notre catalogue et trouvez votre prochain jeu préféré !
+            Explorez notre catalogue de jeux exceptionnels. Des chefs-d'œuvre classiques 
+            aux dernières sorties, trouvez votre prochaine aventure gaming !
         </p>
         <div class="hero-buttons">
-            <a href="{{ url_for('items_list') }}" class="btn btn-primary">Voir le catalogue</a>
-            <a href="{{ url_for('about') }}" class="btn btn-secondary">En savoir plus</a>
+            <a href="{{ url_for('items_list') }}" class="btn btn-primary btn-lg">
+                <span>🚀</span> Explorer le catalogue
+            </a>
+            <a href="{{ url_for('items_list') }}?year=2026" class="btn btn-glass">
+                <span>🔥</span> Sorties 2026
+            </a>
         </div>
     </div>
 </div>
 
-<section class="features">
-    <h3>Pourquoi notre catalogue ?</h3>
-    <div class="features-grid">
-        <div class="feature-card">
-            <span class="feature-icon">🎯</span>
-            <h4>Sélection de qualité</h4>
-            <p>Des jeux soigneusement sélectionnés parmi les meilleurs titres.</p>
-        </div>
-        <div class="feature-card">
-            <span class="feature-icon">📋</span>
-            <h4>Informations détaillées</h4>
-            <p>Développeur, année, genre, plateformes et description pour chaque jeu.</p>
-        </div>
-        <div class="feature-card">
-            <span class="feature-icon">🚀</span>
-            <h4>Simple et rapide</h4>
-            <p>Une interface intuitive pour trouver rapidement ce que vous cherchez.</p>
-        </div>
+<!-- News / Actualités -->
+<section class="section news-section">
+    <div class="section-header">
+        <h3><span class="section-icon">📰</span> Actualités Gaming</h3>
+        <a href="{{ url_for('news_list') }}" class="see-all">Voir tout →</a>
+    </div>
+    <div class="news-grid">
+        <a href="{{ url_for('news_detail', news_id=1) }}" class="news-card news-featured">
+            <div class="news-image">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring DLC">
+                <span class="news-tag">À la une</span>
+            </div>
+            <div class="news-content">
+                <span class="news-date">📅 12 janvier 2026</span>
+                <h4>Elden Ring Nightreign : Le nouveau DLC arrive bientôt !</h4>
+                <p>FromSoftware annonce une nouvelle extension pour son chef-d'œuvre...</p>
+            </div>
+        </a>
+        <a href="{{ url_for('news_detail', news_id=2) }}" class="news-card">
+            <div class="news-image">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3">
+            </div>
+            <div class="news-content">
+                <span class="news-date">📅 10 janvier 2026</span>
+                <h4>Baldur's Gate 3 : Record de joueurs</h4>
+                <p>Le RPG de Larian Studios continue de battre des records...</p>
+            </div>
+        </a>
+        <a href="{{ url_for('news_detail', news_id=3) }}" class="news-card">
+            <div class="news-image">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png" alt="God of War">
+            </div>
+            <div class="news-content">
+                <span class="news-date">📅 8 janvier 2026</span>
+                <h4>God of War : Suite confirmée</h4>
+                <p>Santa Monica Studio tease le prochain chapitre de la saga...</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Jeux Tendances -->
+<section class="section trending-section">
+    <div class="section-header">
+        <h3><span class="section-icon">🔥</span> Tendances</h3>
+        <a href="{{ url_for('items_list') }}?year=2020-2025" class="see-all">Voir tout →</a>
+    </div>
+    <div class="games-scroll">
+        {% for game in trending_games %}
+        <a href="{{ url_for('item_detail', item_id=game.id) }}" class="game-card trending-card">
+            <div class="game-card-image">
+                {% if game.images %}
+                <img src="{{ game.images[0] }}" alt="{{ game.title }}" loading="lazy">
+                {% endif %}
+                <div class="game-card-overlay">
+                    <span class="game-year">{{ game.year }}</span>
+                </div>
+            </div>
+            <div class="game-card-info">
+                <span class="game-genre">{{ game.genre }}</span>
+                <h4>{{ game.title }}</h4>
+                <p class="game-developer">{{ game.developer }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Jeux Populaires -->
+<section class="section popular-section">
+    <div class="section-header">
+        <h3><span class="section-icon">⭐</span> Jeux Populaires</h3>
+        <a href="{{ url_for('items_list') }}" class="see-all">Voir tout →</a>
+    </div>
+    <div class="popular-grid">
+        {% for game in popular_games %}
+        <a href="{{ url_for('item_detail', item_id=game.id) }}" class="popular-card">
+            <div class="popular-card-bg">
+                {% if game.images %}
+                <img src="{{ game.images[0] }}" alt="{{ game.title }}" loading="lazy">
+                {% endif %}
+            </div>
+            <div class="popular-card-content">
+                <span class="popular-rank">#{{ loop.index }}</span>
+                <div class="popular-info">
+                    <span class="game-genre">{{ game.genre }}</span>
+                    <h4>{{ game.title }}</h4>
+                    <p>{{ game.developer }} • {{ game.year }}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Catégories rapides -->
+<section class="section categories-section">
+    <div class="section-header">
+        <h3><span class="section-icon">🎯</span> Explorer par catégorie</h3>
+    </div>
+    <div class="categories-grid">
+        <a href="{{ url_for('items_list') }}?genre=Action-RPG" class="category-card">
+            <span class="category-icon">⚔️</span>
+            <span class="category-name">Action-RPG</span>
+        </a>
+        <a href="{{ url_for('items_list') }}?genre=Action-Aventure" class="category-card">
+            <span class="category-icon">🗡️</span>
+            <span class="category-name">Action-Aventure</span>
+        </a>
+        <a href="{{ url_for('items_list') }}?genre=RPG" class="category-card">
+            <span class="category-icon">🧙</span>
+            <span class="category-name">RPG</span>
+        </a>
+        <a href="{{ url_for('items_list') }}?genre=Plateforme" class="category-card">
+            <span class="category-icon">🏃</span>
+            <span class="category-name">Plateforme</span>
+        </a>
+        <a href="{{ url_for('items_list') }}?genre=Simulation" class="category-card">
+            <span class="category-icon">🌾</span>
+            <span class="category-name">Simulation</span>
+        </a>
+        <a href="{{ url_for('items_list') }}?genre=Roguelike" class="category-card">
+            <span class="category-icon">💀</span>
+            <span class="category-name">Roguelike</span>
+        </a>
+    </div>
+</section>
+
+<!-- Call to action -->
+<section class="cta-section">
+    <div class="cta-content">
+        <h3>🎮 Prêt à jouer ?</h3>
+        <p>Découvrez notre catalogue complet de {{ stats.total_games }} jeux exceptionnels</p>
+        <a href="{{ url_for('items_list') }}" class="btn btn-primary btn-lg">Parcourir le catalogue</a>
     </div>
 </section>
 {% endblock %}

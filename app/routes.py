@@ -14,20 +14,22 @@ def load_items():
         return json.load(f)
 
 
+def load_news():
+    """Charge les actualités depuis le fichier JSON"""
+    json_path = os.path.join(os.path.dirname(__file__), 'data', 'news.json')
+    with open(json_path, encoding='utf-8') as f:
+        return json.load(f)
+
+
 def get_unique_values(items, key):
     """Extrait les valeurs uniques d'une clé donnée"""
     return sorted(set(item[key] for item in items if key in item))
 
 
-def get_year_ranges():
-    """Retourne les plages d'années pour le filtrage"""
-    return [
-        ("2020-2025", "2020 - 2025"),
-        ("2015-2019", "2015 - 2019"),
-        ("2010-2014", "2010 - 2014"),
-        ("2000-2009", "2000 - 2009"),
-        ("avant-2000", "Avant 2000")
-    ]
+def get_years(items):
+    """Retourne les années disponibles dans le catalogue (triées décroissant)"""
+    years = sorted(set(item.get('year', 0) for item in items if item.get('year')), reverse=True)
+    return years
 
 
 def get_platforms():
@@ -40,25 +42,38 @@ def get_platforms():
     ]
 
 
-def filter_by_year_range(items, year_range):
-    """Filtre les items par plage d'années"""
-    if year_range == "2020-2025":
-        return [i for i in items if 2020 <= i.get('year', 0) <= 2025]
-    elif year_range == "2015-2019":
-        return [i for i in items if 2015 <= i.get('year', 0) <= 2019]
-    elif year_range == "2010-2014":
-        return [i for i in items if 2010 <= i.get('year', 0) <= 2014]
-    elif year_range == "2000-2009":
-        return [i for i in items if 2000 <= i.get('year', 0) <= 2009]
-    elif year_range == "avant-2000":
-        return [i for i in items if i.get('year', 0) < 2000]
-    return items
+def filter_by_year(items, year):
+    """Filtre les items par année exacte"""
+    try:
+        year_int = int(year)
+        return [i for i in items if i.get('year', 0) == year_int]
+    except (ValueError, TypeError):
+        return items
 
 
 @app.route('/')
 def index():
-    """Page d'accueil"""
-    return render_template('index.html')
+    """Page d'accueil avec jeux populaires et tendances"""
+    all_items = load_items()
+    
+    # Jeux populaires (les mieux notés / classiques)
+    popular_ids = [3, 4, 20, 1, 8]  # Elden Ring, Witcher 3, Baldur's Gate 3, Zelda, Cyberpunk
+    popular_games = [item for item in all_items if item['id'] in popular_ids][:4]
+    
+    # Tendances (jeux récents 2020+)
+    trending_games = [item for item in all_items if item.get('year', 0) >= 2020][:6]
+    
+    # Stats
+    stats = {
+        'total_games': len(all_items),
+        'genres': len(set(item.get('genre', '') for item in all_items)),
+        'recent': len([i for i in all_items if i.get('year', 0) >= 2020])
+    }
+    
+    return render_template('index.html', 
+                           popular_games=popular_games,
+                           trending_games=trending_games,
+                           stats=stats)
 
 
 @app.route('/items')
@@ -91,9 +106,9 @@ def items_list():
             if item.get('genre', '') == genre_filter
         ]
     
-    # Filtre par plage d'années
+    # Filtre par année exacte
     if year_filter:
-        filtered_items = filter_by_year_range(filtered_items, year_filter)
+        filtered_items = filter_by_year(filtered_items, year_filter)
     
     # Filtre par plateforme (recherche partielle)
     if platform_filter:
@@ -105,7 +120,7 @@ def items_list():
     # Préparer les options de filtrage
     genres = get_unique_values(all_items, 'genre')
     platforms = get_platforms()  # Plateformes simplifiées style Instant Gaming
-    year_ranges = get_year_ranges()
+    years = get_years(all_items)  # Années individuelles
     
     return render_template(
         'items_list.html',
@@ -113,7 +128,7 @@ def items_list():
         total_items=len(all_items),
         genres=genres,
         platforms=platforms,
-        year_ranges=year_ranges,
+        years=years,
         current_search=search_query,
         current_genre=genre_filter,
         current_year=year_filter,
@@ -135,6 +150,48 @@ def item_detail(item_id):
 def about():
     """Page À propos"""
     return render_template('about.html')
+
+
+@app.route('/privacy')
+def privacy():
+    """Page Politique de confidentialité"""
+    return render_template('privacy.html')
+
+
+@app.route('/cookies')
+def cookies():
+    """Page Politique des cookies"""
+    return render_template('cookies.html')
+
+
+@app.route('/news')
+def news_list():
+    """Liste des actualités"""
+    news = load_news()
+    return render_template('news_list.html', news=news)
+
+
+@app.route('/news/<int:news_id>')
+def news_detail(news_id):
+    """Détail d'une actualité"""
+    all_news = load_news()
+    article = next((n for n in all_news if n['id'] == news_id), None)
+    if article is None:
+        abort(404)
+    
+    # Récupérer le jeu lié si applicable
+    related_game = None
+    if article.get('related_game_id'):
+        items = load_items()
+        related_game = next((i for i in items if i['id'] == article['related_game_id']), None)
+    
+    # Autres actualités (exclure l'article actuel)
+    other_news = [n for n in all_news if n['id'] != news_id]
+    
+    return render_template('news_detail.html', 
+                           article=article,
+                           related_game=related_game,
+                           other_news=other_news)
 
 
 @app.errorhandler(404)

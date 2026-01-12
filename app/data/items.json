@@ -388,5 +388,57 @@
             "https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/T45iRN1bhiWcJUzST6UFGBvO.png",
             "https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/HJbRn0CwGuH5W4kJm0O7rH5F.png"
         ]
+    },
+    {
+        "id": 31,
+        "title": "Resident Evil Requiem",
+        "developer": "Capcom",
+        "year": 2026,
+        "genre": "Survival Horror",
+        "platform": "PC, PS5, Xbox Series X",
+        "description": "Le dernier chapitre de la saga Resident Evil. Affrontez une nouvelle menace biologique dans un monde post-apocalyptique.",
+        "images": [
+            "https://gaming-cdn.com/images/products/9000/orig/resident-evil-requiem-pc-steam-cover.jpg?v=1761841445",
+            "https://i.ytimg.com/vi/GmNyB88UBrc/maxresdefault.jpg"
+        ]
+    },
+    {
+        "id": 32,
+        "title": "GTA VI",
+        "developer": "Rockstar Games",
+        "year": 2026,
+        "genre": "Action-Aventure",
+        "platform": "PC, PS5, Xbox Series X",
+        "description": "Le retour tant attendu de la franchise Grand Theft Auto. Explorez Vice City dans une aventure épique.",
+        "images": [
+            "https://i.ytimg.com/vi/QdBZY2fkU-0/maxresdefault.jpg",
+            "https://www.tomsguide.fr/content/uploads/sites/2/2024/04/GTA-6-carte-map-projet-fans-taille.png"
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Crimson Desert",
+        "developer": "Pearl Abyss",
+        "year": 2026,
+        "genre": "Action-RPG",
+        "platform": "PC, PS5, Xbox Series X",
+        "description": "Un RPG d'action en monde ouvert mêlant combats épiques et exploration d'un vaste désert.",
+        "images": [
+            "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3321460/abd7dbdeaede8b6c9a6d40bf116ff2b883f2dd45/header.jpg?t=1767863504",
+            "https://sm.ign.com/t/ign_fr/video/c/crimson-de/crimson-desert-official-gameplay-trailer-gamescom-2023_9hj2.1200.jpg"
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Fable",
+        "developer": "Playground Games",
+        "year": 2026,
+        "genre": "Action-RPG",
+        "platform": "PC, Xbox Series X",
+        "description": "Le reboot de la célèbre franchise RPG. Retournez à Albion dans une aventure féérique.",
+        "images": [
+            "https://image.jeuxvideo.com/medias/159558/1595576465-5148-jaquette-avant.png",
+            "https://gaming-cdn.com/images/news/articles/10965/cover/xbox-repousse-fable-jusqu-en-2026-cover67bdec714d2fa.jpg"
+        ]
     }
 ]

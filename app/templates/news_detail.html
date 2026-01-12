@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} - GameCatalog{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/news.module.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="news-detail-page">
+    <!-- Article Header -->
+    <article class="article">
+        <div class="article-header">
+            <a href="{{ url_for('news_list') }}" class="back-link">← Retour aux actualités</a>
+            <span class="article-tag">{{ article.tag }}</span>
+            <h1>{{ article.title }}</h1>
+            <div class="article-meta">
+                <span class="article-date">📅 {{ article.date }}</span>
+                <span class="article-author">✍️ Par {{ article.author }}</span>
+            </div>
+        </div>
+
+        <div class="article-image">
+            <img src="{{ article.image }}" alt="{{ article.title }}" loading="lazy">
+        </div>
+
+        <div class="article-content">
+            {% for paragraph in article.content.split('\n\n') %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+        </div>
+
+        <!-- Related Game -->
+        {% if related_game %}
+        <div class="related-game">
+            <h3>🎮 Jeu concerné</h3>
+            <a href="{{ url_for('item_detail', item_id=related_game.id) }}" class="related-game-card">
+                <div class="related-game-image">
+                    {% if related_game.images %}
+                    <img src="{{ related_game.images[0] }}" alt="{{ related_game.title }}" loading="lazy">
+                    {% endif %}
+                </div>
+                <div class="related-game-info">
+                    <h4>{{ related_game.title }}</h4>
+                    <p>{{ related_game.developer }} • {{ related_game.year }}</p>
+                    <span class="view-game">Voir le jeu →</span>
+                </div>
+            </a>
+        </div>
+        {% endif %}
+
+        <!-- Share & Actions -->
+        <div class="article-actions">
+            <span class="share-text">Partager :</span>
+            <div class="share-buttons">
+                <button class="share-btn" id="copyLinkBtn" title="Copier le lien">
+                    🔗 Copier le lien
+                </button>
+            </div>
+        </div>
+    </article>
+
+    <!-- Other News -->
+    {% if other_news %}
+    <section class="other-news">
+        <h3>📰 Autres actualités</h3>
+        <div class="other-news-grid">
+            {% for news in other_news[:3] %}
+            <a href="{{ url_for('news_detail', news_id=news.id) }}" class="other-news-card">
+                <div class="other-news-image">
+                    <img src="{{ news.image }}" alt="{{ news.title }}" loading="lazy">
+                </div>
+                <div class="other-news-content">
+                    <span class="news-date">{{ news.date }}</span>
+                    <h4>{{ news.title }}</h4>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+</div>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        this.innerHTML = '✅ Lien copié !';
+        setTimeout(() => {
+            this.innerHTML = '🔗 Copier le lien';
+        }, 2000);
+    }).catch(err => {
+        // Fallback pour les navigateurs plus anciens
+        const textArea = document.createElement('textarea');
+        textArea.value = url;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        this.innerHTML = '✅ Lien copié !';
+        setTimeout(() => {
+            this.innerHTML = '🔗 Copier le lien';
+        }, 2000);
+    });
+});
+</script>
+{% endblock %}

@@ -1,21 +1,76 @@
 /* ===== footer.module.css - Styles du footer ===== */
 
 footer {
-    background: var(--surface-color);
-    padding: 1.5rem;
-    text-align: center;
-    color: var(--text-secondary);
+    background: linear-gradient(180deg, var(--surface-color), #0d0d15);
+    padding: 3rem 2rem 1.5rem;
     border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
 }
 
-footer p {
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand h4 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
-footer a {
-    color: var(--primary-color);
+.footer-links h5 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
-footer a:hover {
-    color: var(--secondary-color);
+.footer-links a {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-links a:hover {
+        transform: none;
+    }
 }

@@ -46,14 +46,16 @@ Les données sont stockées dans un fichier JSON et le site est conteneurisé av
 
 ---
 
-## 🌐 Les 4 pages du site
+## 🌐 Les pages du site
 
 | Route | Template | Description |
 |-------|----------|-------------|
-| `/` | index.html | Page d'accueil avec présentation du site |
-| `/items` | items_list.html | Liste de tous les jeux du catalogue |
+| `/` | index.html | Page d'accueil avec actualités et tendances |
+| `/items` | items_list.html | Catalogue avec recherche et filtres |
 | `/items/<id>` | item_detail.html | Détail d'un jeu spécifique |
 | `/about` | about.html | Page À propos avec infos sur le projet |
+| `/privacy` | privacy.html | Politique de confidentialité |
+| `/cookies` | cookies.html | Politique des cookies |
 
 ---
 
@@ -69,14 +71,17 @@ Projet/
 │   ├── templates/
 │   │   ├── base.html         # Template de base
 │   │   ├── index.html        # Page d'accueil
-│   │   ├── items_list.html   # Liste des jeux
+│   │   ├── items_list.html   # Liste des jeux avec filtres
 │   │   ├── item_detail.html  # Détail d'un jeu
 │   │   ├── about.html        # Page À propos
+│   │   ├── privacy.html      # Politique de confidentialité
+│   │   ├── cookies.html      # Politique des cookies
 │   │   ├── 404.html          # Page d'erreur 404
 │   │   └── partials/
 │   │       ├── header.html   # En-tête du site
 │   │       └── footer.html   # Pied de page
 │   └── static/
+│       ├── favicon.svg       # Icône du site
 │       └── css/              # CSS modulaires
 │           ├── base.module.css
 │           ├── header.module.css
@@ -85,10 +90,14 @@ Projet/
 │           ├── items_list.module.css
 │           ├── item_detail.module.css
 │           ├── about.module.css
+│           ├── legal.module.css
 │           └── 404.module.css
 ├── requirements.txt          # Dépendances Python
 ├── Dockerfile                # Image Docker
 ├── docker-compose.yml        # Configuration Docker Compose
+├── start.py                  # Script de lancement Python
+├── start.bat                 # Script de lancement Windows
+├── start.sh                  # Script de lancement Linux/Mac
 └── README.md                 # Ce fichier
 ```
 

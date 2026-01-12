@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/legal.module.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="legal-page">
+    <div class="legal-header">
+        <h2>🍪 Politique des Cookies</h2>
+        <p class="legal-date">Dernière mise à jour : 12 janvier 2026</p>
+    </div>
+
+    <div class="legal-content">
+        <section class="legal-section">
+            <h3>1. Qu'est-ce qu'un cookie ?</h3>
+            <p>
+                Un cookie est un petit fichier texte stocké sur votre ordinateur ou appareil mobile 
+                lorsque vous visitez un site web. Les cookies permettent au site de mémoriser 
+                vos actions et préférences pendant une période donnée.
+            </p>
+        </section>
+
+        <section class="legal-section">
+            <h3>2. Types de cookies</h3>
+            <div class="cookie-types">
+                <div class="cookie-type">
+                    <h4>🔧 Cookies essentiels</h4>
+                    <p>
+                        Nécessaires au fonctionnement du site. Ils permettent d'utiliser 
+                        les fonctionnalités principales.
+                    </p>
+                    <span class="cookie-status active">Toujours actifs</span>
+                </div>
+                <div class="cookie-type">
+                    <h4>📊 Cookies analytiques</h4>
+                    <p>
+                        Permettent de comprendre comment les visiteurs utilisent le site.
+                    </p>
+                    <span class="cookie-status inactive">Non utilisés</span>
+                </div>
+                <div class="cookie-type">
+                    <h4>🎯 Cookies publicitaires</h4>
+                    <p>
+                        Utilisés pour afficher des publicités pertinentes.
+                    </p>
+                    <span class="cookie-status inactive">Non utilisés</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <h3>3. Cookies utilisés sur ce site</h3>
+            <p>
+                Ce site étant un projet éducatif (TP Flask + Docker), nous n'utilisons 
+                <strong>aucun cookie</strong> pour le moment.
+            </p>
+            <div class="cookie-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Durée</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="no-cookies">Aucun cookie utilisé 🎉</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <h3>4. Gérer vos cookies</h3>
+            <p>
+                Vous pouvez à tout moment modifier vos préférences de cookies via les 
+                paramètres de votre navigateur :
+            </p>
+            <ul>
+                <li><strong>Chrome</strong> : Paramètres → Confidentialité et sécurité → Cookies</li>
+                <li><strong>Firefox</strong> : Options → Vie privée et sécurité → Cookies</li>
+                <li><strong>Safari</strong> : Préférences → Confidentialité → Cookies</li>
+                <li><strong>Edge</strong> : Paramètres → Cookies et autorisations de site</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h3>5. Plus d'informations</h3>
+            <p>
+                Pour en savoir plus sur les cookies et leur gestion, vous pouvez consulter 
+                le site de la <a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs" target="_blank">CNIL</a>.
+            </p>
+        </section>
+    </div>
+
+    <div class="legal-footer">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">← Retour à l'accueil</a>
+        <a href="{{ url_for('privacy') }}" class="btn btn-secondary">Politique de confidentialité</a>
+    </div>
+</div>
+{% endblock %}

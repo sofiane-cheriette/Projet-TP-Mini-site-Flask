@@ -43,8 +43,8 @@
                 <label for="year">Année</label>
                 <select name="year" id="year" class="filter-select" onchange="this.form.submit()">
                     <option value="">Toutes les années</option>
-                    {% for value, label in year_ranges %}
-                    <option value="{{ value }}" {% if current_year == value %}selected{% endif %}>{{ label }}</option>
+                    {% for year in years %}
+                    <option value="{{ year }}" {% if current_year == year|string %}selected{% endif %}>{{ year }}</option>
                     {% endfor %}
                 </select>
             </div>
