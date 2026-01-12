@@ -1,4 +1,9 @@
 @echo off
+setlocal
+
+:: Ignorer Ctrl+C pour eviter l'arret accidentel
+break off
+
 echo ========================================
 echo    Mini Catalogue de Jeux Video
 echo ========================================
