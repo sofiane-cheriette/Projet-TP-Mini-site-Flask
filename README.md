@@ -13,7 +13,7 @@ docker compose up --build
 
 ### Option 2 : Script automatique (Windows)
 ```bash
-start.bat
+.\start.bat
 ```
 
 ### Option 3 : Script automatique (Linux/Mac)
