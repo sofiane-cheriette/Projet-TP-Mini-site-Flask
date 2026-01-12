@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Catalogue de Jeux Vidéo</title>
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.module.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.module.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.module.css') }}">
+    <!-- CSS spécifique à chaque page -->
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    {% include 'partials/header.html' %}
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    {% include 'partials/footer.html' %}
+</body>
+</html>

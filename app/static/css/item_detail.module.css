@@ -1,0 +1,107 @@
+/* ===== item_detail.module.css - Styles du détail d'un item ===== */
+
+.item-detail {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.item-detail-header {
+    margin-bottom: 2rem;
+}
+
+.item-detail-content {
+    background: var(--surface-color);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.item-genre-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.item-detail-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.item-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.meta-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.meta-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.item-description-full h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.item-description-full p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* ===== Galerie d'images ===== */
+.item-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .item-detail-content {
+        padding: 1.5rem;
+    }
+    
+    .item-gallery {
+        grid-template-columns: 1fr;
+    }
+}

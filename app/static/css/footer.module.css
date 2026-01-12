@@ -1,0 +1,21 @@
+/* ===== footer.module.css - Styles du footer ===== */
+
+footer {
+    background: var(--surface-color);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}

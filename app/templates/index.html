@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.module.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h2>Bienvenue sur le Mini Catalogue de Jeux Vidéo</h2>
+        <p class="hero-description">
+            Découvrez notre sélection des meilleurs jeux vidéo de tous les temps. 
+            De l'action-aventure aux RPG, en passant par les metroidvanias, 
+            explorez notre catalogue et trouvez votre prochain jeu préféré !
+        </p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('items_list') }}" class="btn btn-primary">Voir le catalogue</a>
+            <a href="{{ url_for('about') }}" class="btn btn-secondary">En savoir plus</a>
+        </div>
+    </div>
+</div>
+
+<section class="features">
+    <h3>Pourquoi notre catalogue ?</h3>
+    <div class="features-grid">
+        <div class="feature-card">
+            <span class="feature-icon">🎯</span>
+            <h4>Sélection de qualité</h4>
+            <p>Des jeux soigneusement sélectionnés parmi les meilleurs titres.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">📋</span>
+            <h4>Informations détaillées</h4>
+            <p>Développeur, année, genre, plateformes et description pour chaque jeu.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🚀</span>
+            <h4>Simple et rapide</h4>
+            <p>Une interface intuitive pour trouver rapidement ce que vous cherchez.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/404.module.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="error-page">
+    <div class="error-content">
+        <span class="error-icon">🎮</span>
+        <h2>404 - Page non trouvée</h2>
+        <p>Oups ! L'élément que vous recherchez n'existe pas dans notre catalogue.</p>
+        <div class="error-buttons">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Retour à l'accueil</a>
+            <a href="{{ url_for('items_list') }}" class="btn btn-secondary">Voir le catalogue</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

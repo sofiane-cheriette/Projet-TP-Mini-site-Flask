@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.module.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="about-page">
+    <div class="about-header">
+        <h2>À propos</h2>
+    </div>
+    
+    <div class="about-content">
+        <section class="about-section">
+            <h3>📌 Description du site</h3>
+            <p>
+                Ce mini catalogue de jeux vidéo est une application web développée dans le cadre 
+                d'un TP de L3 sur Flask et Docker. L'application permet de parcourir une sélection 
+                de jeux vidéo populaires, avec leurs informations détaillées.
+            </p>
+        </section>
+        
+        <section class="about-section">
+            <h3>🎮 Thème choisi : Jeux Vidéo</h3>
+            <p>
+                Nous avons choisi le thème des jeux vidéo car c'est un domaine passionnant 
+                qui permet d'avoir des données variées et intéressantes à afficher :
+            </p>
+            <ul>
+                <li>Titre du jeu</li>
+                <li>Développeur / Studio</li>
+                <li>Année de sortie</li>
+                <li>Genre (Action, RPG, Aventure...)</li>
+                <li>Plateformes disponibles</li>
+                <li>Description détaillée</li>
+            </ul>
+        </section>
+        
+        <section class="about-section">
+            <h3>👥 Équipe du projet</h3>
+            <div class="team-members">
+                <div class="team-member">
+                    <span class="member-icon">👨‍💻</span>
+                    <p><strong>Sofiane CHERIETTE</strong></p>
+                    <p>Étudiant L3</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about-section">
+            <h3>🛠️ Technologies utilisées</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">Jinja2</span>
+                <span class="tech-badge">HTML/CSS</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">JSON</span>
+            </div>
+        </section>
+        
+        <section class="about-section">
+            <h3>📂 Structure du projet</h3>
+            <pre class="code-block">
+app/
+├── __init__.py
+├── routes.py
+├── data/
+│   └── items.json
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── items_list.html
+│   ├── item_detail.html
+│   └── about.html
+└── static/
+    └── style.css
+requirements.txt
+Dockerfile
+README.md
+            </pre>
+        </section>
+    </div>
+</div>
+{% endblock %}

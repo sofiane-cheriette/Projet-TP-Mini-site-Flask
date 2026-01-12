@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/items_list.module.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>Catalogue des Jeux Vidéo</h2>
+    <p>{{ items|length }} jeux disponibles dans notre catalogue</p>
+</div>
+
+<div class="items-grid">
+    {% for item in items %}
+    <div class="item-card">
+        {% if item.images %}
+        <div class="item-card-image">
+            <img src="{{ item.images[0] }}" alt="{{ item.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="item-card-header">
+            <span class="item-genre">{{ item.genre }}</span>
+        </div>
+        <div class="item-card-body">
+            <h3>{{ item.title }}</h3>
+            <p class="item-developer">{{ item.developer }} ({{ item.year }})</p>
+            <p class="item-platform">📱 {{ item.platform }}</p>
+            <p class="item-description">{{ item.description[:100] }}...</p>
+        </div>
+        <div class="item-card-footer">
+            <a href="{{ url_for('item_detail', item_id=item.id) }}" class="btn btn-primary">Voir détails</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

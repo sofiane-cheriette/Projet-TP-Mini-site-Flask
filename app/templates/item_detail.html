@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/item_detail.module.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="item-detail">
+    <div class="item-detail-header">
+        <a href="{{ url_for('items_list') }}" class="btn btn-back">← Retour à la liste</a>
+    </div>
+    
+    <div class="item-detail-content">
+        <div class="item-detail-main">
+            <span class="item-genre-badge">{{ item.genre }}</span>
+            <h2>{{ item.title }}</h2>
+            
+            {% if item.images %}
+            <div class="item-gallery">
+                {% for image in item.images %}
+                <div class="gallery-item">
+                    <img src="{{ image }}" alt="{{ item.title }} - Image {{ loop.index }}" loading="lazy">
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            <div class="item-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Développeur</span>
+                    <span class="meta-value">{{ item.developer }}</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Année de sortie</span>
+                    <span class="meta-value">{{ item.year }}</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Plateformes</span>
+                    <span class="meta-value">{{ item.platform }}</span>
+                </div>
+            </div>
+            
+            <div class="item-description-full">
+                <h3>Description</h3>
+                <p>{{ item.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

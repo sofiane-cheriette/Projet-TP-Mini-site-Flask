@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mini-catalogue:
+    build: .
+    container_name: mini-catalogue
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app/routes.py
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_RUN_PORT=5000
+    restart: unless-stopped

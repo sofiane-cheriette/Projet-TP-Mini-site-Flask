@@ -1,0 +1,46 @@
+/* ===== 404.module.css - Styles de la page d'erreur ===== */
+
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.error-content {
+    text-align: center;
+    background: var(--surface-color);
+    padding: 4rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.error-icon {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.error-content h2 {
+    color: var(--error-color);
+    margin-bottom: 1rem;
+}
+
+.error-content p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.error-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .error-content {
+        padding: 2rem;
+    }
+}

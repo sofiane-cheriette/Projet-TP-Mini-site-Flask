@@ -1,0 +1,392 @@
+[
+    {
+        "id": 1,
+        "title": "The Legend of Zelda: Breath of the Wild",
+        "developer": "Nintendo",
+        "year": 2017,
+        "genre": "Action-Aventure",
+        "platform": "Nintendo Switch",
+        "description": "Un jeu d'action-aventure en monde ouvert où Link doit sauver le royaume d'Hyrule du fléau Ganon.",
+        "images": [
+            "https://www.nintendo.com/eu/media/images/assets/nintendo_switch_2_games/thelegendofzeldabreathofthewild_nintendoswitch2edition/2x1_NSwitch2_TLoZTBotWNSwitch2Edition_image1600w.jpg",
+            "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_TheLegendOfZeldaBreathOfTheWild_image1600w.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Red Dead Redemption 2",
+        "developer": "Rockstar Games",
+        "year": 2018,
+        "genre": "Action-Aventure",
+        "platform": "PC, PS4, Xbox One",
+        "description": "Une épopée western immersive suivant Arthur Morgan, hors-la-loi dans l'Amérique de 1899.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/ss_66b553f4c209476d3e4ce25fa4714002cc914c4f.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Elden Ring",
+        "developer": "FromSoftware",
+        "year": 2022,
+        "genre": "Action-RPG",
+        "platform": "PC, PS5, Xbox Series X",
+        "description": "Un RPG d'action en monde ouvert créé en collaboration avec George R.R. Martin.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/ss_e80a907c2c43337e53316c71555c3c3035a1343e.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "The Witcher 3: Wild Hunt",
+        "developer": "CD Projekt Red",
+        "year": 2015,
+        "genre": "Action-RPG",
+        "platform": "PC, PS4, Xbox One, Switch",
+        "description": "Incarnez Geralt de Riv, un chasseur de monstres à la recherche de sa fille adoptive.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/ss_107600c1337accc09104f7a8aa7f275f23cad096.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Minecraft",
+        "developer": "Mojang",
+        "year": 2011,
+        "genre": "Bac à sable",
+        "platform": "Multiplateforme",
+        "description": "Le jeu de construction et de survie le plus vendu de tous les temps.",
+        "images": [
+            "https://gaming-cdn.com/images/products/442/616x353/minecraft-java-bedrock-edition-java-bedrock-edition-pc-jeu-cover.jpg?v=1716387513",
+            "https://images.bfmtv.com/gl5Rx8HgsHzQHjPOQRDvjj8KYMQ=/0x0:1600x900/1600x0/images/Le-jeu-video-Minecraft-paru-en-2009-1454173.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "God of War Ragnarök",
+        "developer": "Santa Monica Studio",
+        "year": 2022,
+        "genre": "Action-Aventure",
+        "platform": "PS4, PS5",
+        "description": "Kratos et Atreus affrontent le Ragnarök dans cette suite épique.",
+        "images": [
+            "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png",
+            "https://www.pedagojeux.fr/wp-content/uploads/2022/12/Campagne-PGJ-Noel-2022-FB-1024-x-500-px.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Hollow Knight",
+        "developer": "Team Cherry",
+        "year": 2017,
+        "genre": "Metroidvania",
+        "platform": "PC, Switch, PS4, Xbox One",
+        "description": "Un metroidvania magnifique où vous explorez le royaume souterrain de Hallownest.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/header.jpg",
+            "https://focus.courrierinternational.com/2025/09/04/0/0/2560/1440/1280/0/60/0/2695036_upload-1-bsq5fzttpaff-hollow-knight-silksong.png"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Cyberpunk 2077",
+        "developer": "CD Projekt Red",
+        "year": 2020,
+        "genre": "Action-RPG",
+        "platform": "PC, PS5, Xbox Series X",
+        "description": "Un RPG en monde ouvert dans une mégalopole futuriste. Incarnez V à Night City.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/ss_872822c5e50dc71f345416098d29fc3ae5cd26c1.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Hades",
+        "developer": "Supergiant Games",
+        "year": 2020,
+        "genre": "Roguelike",
+        "platform": "PC, Switch, PS4, PS5, Xbox",
+        "description": "Un roguelike d'action où vous incarnez Zagreus, fils d'Hadès.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/ss_c0fed447426b69981cf1721756acf75369801b31.jpg"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Dark Souls III",
+        "developer": "FromSoftware",
+        "year": 2016,
+        "genre": "Action-RPG",
+        "platform": "PC, PS4, Xbox One",
+        "description": "Le dernier épisode de la trilogie Dark Souls. Affrontez des boss légendaires.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/374320/header.jpg",
+            "https://p325k7wa.twic.pics/high/dark-souls/dark-souls-3/02-screenshots/1-new-screens/In%20game%20(11).jpg?twic=v1/resize=700/step=10/quality=80"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Sekiro: Shadows Die Twice",
+        "developer": "FromSoftware",
+        "year": 2019,
+        "genre": "Action-Aventure",
+        "platform": "PC, PS4, Xbox One",
+        "description": "Un shinobi dans le Japon féodal cherche à sauver son maître.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/814380/header.jpg",
+            "https://www.activision.com/content/dam/atvi/activision/atvi-touchui/activision/games/game-details/sekiro/shadows-die-twice/sekiro-shadowsdietwice-2.jpg"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Super Mario Odyssey",
+        "developer": "Nintendo",
+        "year": 2017,
+        "genre": "Plateforme",
+        "platform": "Nintendo Switch",
+        "description": "Mario voyage à travers différents royaumes avec son compagnon Cappy.",
+        "images": [
+            "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000001130/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5",
+            "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperMarioOdyssey_image1600w.jpg"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Ghost of Tsushima",
+        "developer": "Sucker Punch",
+        "year": 2020,
+        "genre": "Action-Aventure",
+        "platform": "PS4, PS5, PC",
+        "description": "Incarnez Jin Sakai, un samouraï luttant contre l'invasion mongole du Japon.",
+        "images": [
+            "https://thepopbreak.com/wp-content/uploads/2020/07/Ghost-of-Tsushima_20200717082137.jpg",
+            "https://i.ytimg.com/vi/nVhXp6FX7Y4/maxresdefault.jpg"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Horizon Forbidden West",
+        "developer": "Guerrilla Games",
+        "year": 2022,
+        "genre": "Action-RPG",
+        "platform": "PS4, PS5, PC",
+        "description": "Aloy explore l'Ouest Interdit pour découvrir la source d'une mystérieuse peste.",
+        "images": [
+            "https://image.api.playstation.com/vulcan/ap/rnd/202107/3100/HO8vkO9pfXhwbHi5WHECQJdN.png",
+            "https://image.api.playstation.com/vulcan/ap/rnd/202107/3100/ki3IMVkatVspC4Tiz2NqcIlz.png"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Stardew Valley",
+        "developer": "ConcernedApe",
+        "year": 2016,
+        "genre": "Simulation",
+        "platform": "Multiplateforme",
+        "description": "Héritez d'une vieille ferme et transformez-la en havre prospère.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/ss_b887651a93b0525739049eb4194f633de2df75be.jpg"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Celeste",
+        "developer": "Maddy Makes Games",
+        "year": 2018,
+        "genre": "Plateforme",
+        "platform": "PC, Switch, PS4, Xbox One",
+        "description": "Aidez Madeline à escalader la montagne Celeste. Un platformer précis et touchant.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/504230/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/504230/ss_6b5e4c1e3a4b57c7b3e3b1f5b0c8f9f0c1a2b3c4.jpg"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Persona 5 Royal",
+        "developer": "Atlus",
+        "year": 2020,
+        "genre": "JRPG",
+        "platform": "PS4, PS5, PC, Switch, Xbox",
+        "description": "Menez une double vie de lycéen et de Voleur Fantôme à Tokyo.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1687950/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1687950/ss_94d53a27cb0e4fad5e0b1ab8b5e6c7d8e9f0a1b2.jpg"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Monster Hunter: World",
+        "developer": "Capcom",
+        "year": 2018,
+        "genre": "Action-RPG",
+        "platform": "PC, PS4, Xbox One",
+        "description": "Chassez des monstres géants dans des environnements vivants.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/582010/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/582010/ss_0cf3c3c1b0a8c8e5e5e5e5e5e5e5e5e5e5e5e5e5.jpg"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Disco Elysium",
+        "developer": "ZA/UM",
+        "year": 2019,
+        "genre": "RPG",
+        "platform": "PC, PS4, PS5, Switch, Xbox",
+        "description": "Un RPG narratif révolutionnaire où vous incarnez un détective amnésique.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/ss_c9630bf8e8df3b6e8a3e8a3e8a3e8a3e8a3e8a3e.jpg"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Baldur's Gate 3",
+        "developer": "Larian Studios",
+        "year": 2023,
+        "genre": "RPG",
+        "platform": "PC, PS5, Xbox Series X",
+        "description": "Un RPG épique basé sur Donjons & Dragons. Créez votre personnage et vivez l'aventure.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/ss_c310f3c8d0e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2.jpg"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Animal Crossing: New Horizons",
+        "developer": "Nintendo",
+        "year": 2020,
+        "genre": "Simulation",
+        "platform": "Nintendo Switch",
+        "description": "Créez votre île paradisiaque à votre image. Pêchez, chassez les insectes et décorez.",
+        "images": [
+            "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a",
+            "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_AnimalCrossingNewHorizons_image1600w.jpg"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Death Stranding",
+        "developer": "Kojima Productions",
+        "year": 2019,
+        "genre": "Action",
+        "platform": "PC, PS4, PS5",
+        "description": "Reconnectez une Amérique fragmentée en tant que Sam Porter Bridges.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1190460/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1190460/ss_f6a56c41b4c1c8e0a1b2c3d4e5f6a7b8c9d0e1f2.jpg"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Final Fantasy VII Remake",
+        "developer": "Square Enix",
+        "year": 2020,
+        "genre": "Action-RPG",
+        "platform": "PS4, PS5, PC",
+        "description": "Le remake du classique de 1997. Revivez l'histoire de Cloud et Avalanche.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1462040/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1462040/ss_aa1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b.jpg"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Resident Evil Village",
+        "developer": "Capcom",
+        "year": 2021,
+        "genre": "Survival Horror",
+        "platform": "PC, PS4, PS5, Xbox",
+        "description": "Ethan Winters cherche sa fille dans un village européen hanté.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1196590/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1196590/ss_a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2.jpg"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "It Takes Two",
+        "developer": "Hazelight Studios",
+        "year": 2021,
+        "genre": "Aventure Coopérative",
+        "platform": "PC, PS4, PS5, Xbox, Switch",
+        "description": "Un jeu coopératif où un couple en crise est transformé en poupées.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1426210/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1426210/ss_ab12cd34ef56ab12cd34ef56ab12cd34ef56ab12.jpg"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Cuphead",
+        "developer": "Studio MDHR",
+        "year": 2017,
+        "genre": "Run and Gun",
+        "platform": "PC, Switch, PS4, Xbox One",
+        "description": "Un jeu de run and gun avec un style visuel années 1930.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/268910/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/268910/ss_b5e8e8a1c9b8a1c9b8a1c9b8a1c9b8a1c9b8a1c9.jpg"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Ori and the Will of the Wisps",
+        "developer": "Moon Studios",
+        "year": 2020,
+        "genre": "Metroidvania",
+        "platform": "PC, Switch, Xbox",
+        "description": "La suite des aventures d'Ori dans un metroidvania magnifique.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1057090/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1057090/ss_e4b9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1.jpg"
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Returnal",
+        "developer": "Housemarque",
+        "year": 2021,
+        "genre": "Roguelike",
+        "platform": "PS5, PC",
+        "description": "Selene est coincée dans une boucle temporelle sur une planète hostile.",
+        "images": [
+            "https://www.francebleu.fr/pikapi/images/54c60456-3fd1-44d6-ac65-40eb9b59ea71/1200x680?webp=false",
+            "https://cdn.cultura.com/cdn-cgi/image/width=1200/media/pim/returnal-ps5-0711719813996_6.jpg"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Doom Eternal",
+        "developer": "id Software",
+        "year": 2020,
+        "genre": "FPS",
+        "platform": "PC, PS4, PS5, Xbox, Switch",
+        "description": "Le Doom Slayer combat les forces de l'enfer dans un FPS frénétique.",
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/782330/header.jpg",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/782330/ss_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0.jpg"
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Spider-Man: Miles Morales",
+        "developer": "Insomniac Games",
+        "year": 2020,
+        "genre": "Action-Aventure",
+        "platform": "PS4, PS5, PC",
+        "description": "Miles Morales devient le nouveau Spider-Man de New York.",
+        "images": [
+            "https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/T45iRN1bhiWcJUzST6UFGBvO.png",
+            "https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/HJbRn0CwGuH5W4kJm0O7rH5F.png"
+        ]
+    }
+]
