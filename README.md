@@ -6,18 +6,6 @@
 
 ## 🚀 Lancement rapide
 
-### Option 1 : Docker Compose (recommandé)
-```bash
-docker compose up --build
-```
-
-### Option 2 : Docker
-```bash
-docker build -t mini-catalogue .
-docker run -p 5000:5000 mini-catalogue
-```
-
-### Option 3 : Python (sans Docker)
 ```bash
 pip install -r requirements.txt
 python -m flask run
@@ -29,8 +17,8 @@ python -m flask run
 
 ## 📖 Description
 
-Application web développée dans le cadre d'un TP de L3 sur Flask et Docker.  
-Les données sont stockées dans un fichier JSON et le site est conteneurisé avec Docker.
+Application web développée dans le cadre d'un TP de L3 sur Flask.  
+Les données sont stockées dans un fichier JSON.
 
 **Thème choisi : Jeux Vidéo**
 
@@ -38,7 +26,6 @@ Les données sont stockées dans un fichier JSON et le site est conteneurisé av
 - 🎮 Catalogue de 30 jeux vidéo avec images
 - 🔍 Affichage détaillé de chaque jeu
 - 📱 Design responsive et moderne
-- 🐳 Conteneurisation Docker
 
 ---
 
@@ -83,8 +70,6 @@ Projet/
 │           ├── about.module.css
 │           └── 404.module.css
 ├── requirements.txt          # Dépendances Python
-├── Dockerfile                # Configuration Docker
-├── docker-compose.yml        # Configuration Docker Compose
 └── README.md                 # Ce fichier
 ```
 
@@ -98,7 +83,6 @@ Projet/
 | **Flask 3.0** | Framework web |
 | **Jinja2** | Moteur de templates |
 | **HTML/CSS** | Interface utilisateur |
-| **Docker** | Conteneurisation |
 | **JSON** | Stockage des données |
 
 ---
