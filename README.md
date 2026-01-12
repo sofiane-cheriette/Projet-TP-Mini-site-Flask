@@ -53,6 +53,8 @@ Les données sont stockées dans un fichier JSON et le site est conteneurisé av
 | `/` | index.html | Page d'accueil avec actualités et tendances |
 | `/items` | items_list.html | Catalogue avec recherche et filtres |
 | `/items/<id>` | item_detail.html | Détail d'un jeu spécifique |
+| `/news` | news_list.html | Liste des actualités gaming |
+| `/news/<id>` | news_detail.html | Détail d'une actualité |
 | `/about` | about.html | Page À propos avec infos sur le projet |
 | `/privacy` | privacy.html | Politique de confidentialité |
 | `/cookies` | cookies.html | Politique des cookies |
@@ -67,12 +69,15 @@ Projet/
 │   ├── __init__.py           # Initialisation de l'application Flask
 │   ├── routes.py             # Définition des routes
 │   ├── data/
-│   │   └── items.json        # Données du catalogue (30 jeux avec images)
+│   │   ├── items.json        # Données du catalogue (34 jeux avec images)
+│   │   └── news.json         # Actualités gaming (6 articles)
 │   ├── templates/
 │   │   ├── base.html         # Template de base
 │   │   ├── index.html        # Page d'accueil
 │   │   ├── items_list.html   # Liste des jeux avec filtres
 │   │   ├── item_detail.html  # Détail d'un jeu
+│   │   ├── news_list.html    # Liste des actualités
+│   │   ├── news_detail.html  # Détail d'une actualité
 │   │   ├── about.html        # Page À propos
 │   │   ├── privacy.html      # Politique de confidentialité
 │   │   ├── cookies.html      # Politique des cookies
@@ -89,6 +94,7 @@ Projet/
 │           ├── index.module.css
 │           ├── items_list.module.css
 │           ├── item_detail.module.css
+│           ├── news.module.css
 │           ├── about.module.css
 │           ├── legal.module.css
 │           └── 404.module.css
