@@ -180,17 +180,28 @@
     width: 100%;
     padding: 0.75rem 1rem;
     font-size: 0.95rem;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--primary-color);
     border-radius: 10px;
-    background: var(--bg-color);
+    background: #1a1a2e;
     color: var(--text-primary);
     cursor: pointer;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.filter-select option {
+    background: #1a1a2e;
+    color: var(--text-primary);
+    padding: 0.5rem;
+}
+
+.filter-select:hover {
+    background: #252542;
 }
 
 .filter-select:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
+    background: #252542;
 }
 
 .filter-actions {

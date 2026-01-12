@@ -30,7 +30,7 @@
             <!-- Filtre par genre -->
             <div class="filter-group">
                 <label for="genre">Genre</label>
-                <select name="genre" id="genre" class="filter-select">
+                <select name="genre" id="genre" class="filter-select" onchange="this.form.submit()">
                     <option value="">Tous les genres</option>
                     {% for genre in genres %}
                     <option value="{{ genre }}" {% if current_genre == genre %}selected{% endif %}>{{ genre }}</option>
@@ -41,7 +41,7 @@
             <!-- Filtre par année -->
             <div class="filter-group">
                 <label for="year">Année</label>
-                <select name="year" id="year" class="filter-select">
+                <select name="year" id="year" class="filter-select" onchange="this.form.submit()">
                     <option value="">Toutes les années</option>
                     {% for value, label in year_ranges %}
                     <option value="{{ value }}" {% if current_year == value %}selected{% endif %}>{{ label }}</option>
@@ -52,17 +52,16 @@
             <!-- Filtre par plateforme -->
             <div class="filter-group">
                 <label for="platform">Plateforme</label>
-                <select name="platform" id="platform" class="filter-select">
+                <select name="platform" id="platform" class="filter-select" onchange="this.form.submit()">
                     <option value="">Toutes les plateformes</option>
-                    {% for platform in platforms %}
-                    <option value="{{ platform }}" {% if current_platform == platform %}selected{% endif %}>{{ platform }}</option>
+                    {% for value, label in platforms %}
+                    <option value="{{ value }}" {% if current_platform == value %}selected{% endif %}>{{ label }}</option>
                     {% endfor %}
                 </select>
             </div>
             
-            <!-- Boutons d'action -->
+            <!-- Bouton réinitialiser -->
             <div class="filter-actions">
-                <button type="submit" class="btn btn-secondary">Filtrer</button>
                 <a href="{{ url_for('items_list') }}" class="btn btn-outline">Réinitialiser</a>
             </div>
         </div>

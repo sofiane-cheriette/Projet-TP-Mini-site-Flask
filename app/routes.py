@@ -30,6 +30,16 @@ def get_year_ranges():
     ]
 
 
+def get_platforms():
+    """Retourne les plateformes simplifiées comme Instant Gaming"""
+    return [
+        ("PC", "🖥️ PC"),
+        ("PlayStation", "🎮 PlayStation"),
+        ("Xbox", "🟢 Xbox"),
+        ("Nintendo", "🔴 Nintendo")
+    ]
+
+
 def filter_by_year_range(items, year_range):
     """Filtre les items par plage d'années"""
     if year_range == "2020-2025":
@@ -92,9 +102,9 @@ def items_list():
             if platform_filter.lower() in item.get('platform', '').lower()
         ]
     
-    # Préparer les options de filtrage (basées sur tous les items)
+    # Préparer les options de filtrage
     genres = get_unique_values(all_items, 'genre')
-    platforms = get_unique_values(all_items, 'platform')
+    platforms = get_platforms()  # Plateformes simplifiées style Instant Gaming
     year_ranges = get_year_ranges()
     
     return render_template(
